@@ -1,0 +1,48 @@
+@import "../../SASS/Utils/variable";
+@import "../../SASS/Utils/mixin";
+
+
+.ErrorPage {
+    max-width: 95%;
+    margin: 0 auto;
+    color: $color-primary;
+
+
+
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: calc(100vh - 250px);
+
+
+        &__title {
+            font-weight: 700;
+            font-size: 288px;
+
+            @media screen and (max-width: 480px) {
+                font-size: 140px;
+
+
+            }
+
+        }
+
+        &__content {
+            font-weight: 500;
+            font-size: clamp(20px, 4vw, 36px);
+            text-align: center;
+        }
+    }
+
+    .ErrorPage__infos__return {
+        display: block;
+        text-align: center;
+        font-weight: 500;
+        font-size: clamp(12px, 2.5vw, 18px);
+        padding-bottom: 60px;
+    }
+
+
+}

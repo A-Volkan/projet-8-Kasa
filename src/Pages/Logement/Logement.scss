@@ -1,0 +1,111 @@
+@import "../../SASS/Utils/variable";
+@import "../../SASS/Utils/mixin";
+
+
+.logement__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 95%;
+    margin: 0 auto;
+    color: $color-primary;
+
+    @media screen and (max-width: 768px) {
+        @include flex($direction: column, $align: flex-start, $justify: space-between);
+
+    }
+
+
+    &__infos {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: 500;
+        font-size: 14px;
+
+        button {
+            display: inline;
+            padding: 5px 15px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            border: none;
+            color: $color-secondary;
+            background-color: $color-primary;
+
+            &:hover {
+                box-shadow: 0 2px 8px rgb(0, 0, 0);
+            }
+        }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+
+
+
+
+    &__host {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            @include flex($align: center, $direction: row-reverse, $justify: space-between)
+        }
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 0 10px;
+
+            @media screen and (max-width: 768px) {
+                gap: 0 5px;
+
+            }
+
+
+        }
+
+        &__name {
+            align-self: center;
+            flex-direction: column;
+        }
+
+        img {
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+        }
+    }
+
+
+
+
+
+
+    .logement__content__host__stars {
+        display: flex;
+        gap: 5px;
+    }
+
+    .logement__content__host__stars img {
+        width: 31px;
+        height: 31px;
+
+        @media screen and (max-width: 768px) {
+            width: 25px;
+            height: 25px;
+
+        }
+
+    }
+}

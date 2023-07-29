@@ -1,0 +1,43 @@
+@import "../SASS/Utils/variable";
+@import "../SASS/Utils/mixin";
+
+.navbar {
+	@include flex($direction: row, $justify: space-between, $align: center);
+	height: 68px;
+	max-width: 95%;
+	font-family: 'Montserrat', sans-serif;
+	margin: 0 auto;
+	padding-inline: 47px;
+
+	@media screen and (max-width: 480px) {
+		padding: 0;
+		height: 46px;
+	}
+
+	img {
+		height: 68px;
+		width: 210px;
+
+		@media screen and (max-width: 480px) {
+			width: 100%;
+			height: 46px;
+		}
+	}
+
+	a.active {
+		text-decoration: underline 2px solid;
+	}
+}
+
+.navbar__ul {
+	display: flex;
+	gap: 57px;
+	color: $color-primary;
+	list-style-type: none;
+	font-size: clamp(12px, 2.5vw, 24px);
+
+	@media screen and (max-width: 480px) {
+		gap: 26px;
+
+	}
+}

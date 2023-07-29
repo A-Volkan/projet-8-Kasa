@@ -1,0 +1,96 @@
+@import "../SASS/Utils/variable";
+@import "../SASS/Utils/mixin";
+
+.collapse {
+    background-color: $background-color-second;
+    max-width: 1100px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin: 0 auto;
+
+    &__title {
+        @include flex($direction: row, $align: center, $justify: space-between);
+        background-color: $color-primary;
+        color: $color-secondary;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: clamp(13px, 2vw, 18px);
+        padding: 10px 20px 10px 15px;
+        cursor: pointer;
+        margin: 0px;
+
+    }
+
+    &__title .arrow {
+        transition: all 0.2s ease-in-out;
+
+        @media screen and (max-width: 768px) {
+
+            width: 13px;
+
+
+        }
+
+    }
+
+    &__title .arrow_up {
+        transform: rotate(0deg);
+    }
+
+    &__title .arrow_down {
+        transform: rotate(180deg);
+    }
+
+    &__content {
+        @include justflex;
+        flex-direction: column;
+        gap: 5px;
+        letter-spacing: 1px;
+        opacity: 1;
+        height: auto;
+        padding: 10px;
+        font-size: clamp(12px, 2vw, 16px);
+        color: $color-primary;
+        transition: visibility 0.5s ease-in-out,
+            opacity 0.5s ease-in-out,
+            height 0.2s ease-in-out;
+        visibility: visible;
+    }
+
+    &__content p {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__content__hidden {
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+}
+
+.logement__collapse {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    margin: 30px auto;
+    width: 95%;
+
+
+    &__content {
+        width: 50%;
+
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+        margin: 13px auto 20px;
+
+        &__content {
+            width: 100%;
+        }
+
+    }
+}

@@ -1,0 +1,24 @@
+@import "../SASS/Utils/variable";
+@import "../SASS/Utils/mixin";
+
+
+.grid {
+    @include flex($align: center, $direction: row, $justify: center);
+    background-color: $background-color-second;
+    border-radius: 25px;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 0 auto;
+    padding: 50px;
+    width: 95%;
+
+    @media screen and (max-width: 1230px) {
+        gap: 25px;
+        padding: 25px 15px;
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+
+}
