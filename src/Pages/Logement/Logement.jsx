@@ -7,6 +7,7 @@ import datas from '../../Infos/Infos';
 import greyStar from '../../img/rate2.png';
 import redStar from '../../img/rate1.png';
 import Collapse from '../../Components/Collapse';
+import Main from '../../Components/Main';
 
 
 
@@ -56,7 +57,7 @@ function Logement() {
     }
 
     return (
-        <>
+        <Main>
             <Carroussel image={image} />
             <main className='logement'>
                 <div className='logement__content'>
@@ -107,7 +108,7 @@ function Logement() {
                 </div>
             </main>
 
-        </>
+        </Main>
     );
 }
 
