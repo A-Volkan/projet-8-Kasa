@@ -81,7 +81,7 @@ function Logement() {
 
                                 <div>
                                     <div className='logement__content__host__name'>
-                                        {CurrentLogement.host.name.split(' ').map((namePart, index) => (
+                                        {CurrentLogement.host.name.split(' ').map((namePart, index) => ( //methode split pour diviser en deux partie le nom prenom la chaine de caract .host.name//
                                             <span key={index}>{namePart}</span>
                                         ))}
 

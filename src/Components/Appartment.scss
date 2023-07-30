@@ -11,7 +11,7 @@
     width: 30%;
 
     @media screen and (max-width: 1230px) {
-        width: 47%;
+        width: 48%;
 
     }
 
@@ -24,7 +24,7 @@
     }
 
     &:hover {
-        box-shadow: 0 2px 8px rgb(0, 0, 0);
+        box-shadow: 0 2px 10px rgb(0, 0, 0);
     }
 
     &::after {
@@ -41,7 +41,6 @@
     h3 {
         bottom: 20px;
         color: $color-secondary;
-        font-size: clamp(12px, 3vw, 18px);
         font-weight: 500;
         left: 20px;
         position: absolute;

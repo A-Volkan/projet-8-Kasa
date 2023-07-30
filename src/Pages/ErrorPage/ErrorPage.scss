@@ -12,17 +12,18 @@
     &__infos {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         min-height: calc(100vh - 250px);
+
 
 
         &__title {
             font-weight: 700;
             font-size: 288px;
 
-            @media screen and (max-width: 480px) {
-                font-size: 140px;
+            @media screen and (max-width: 600px) {
+                font-size: 99px;
 
 
             }
@@ -31,7 +32,7 @@
 
         &__content {
             font-weight: 500;
-            font-size: clamp(20px, 4vw, 36px);
+            font-size: clamp(18px, 3vw, 36px);
             text-align: center;
         }
     }
@@ -40,9 +41,11 @@
         display: block;
         text-align: center;
         font-weight: 500;
-        font-size: clamp(12px, 2.5vw, 18px);
-        padding-bottom: 60px;
+        font-size: clamp(14px, 2vw, 18px);
+        text-decoration-line: underline;
+
     }
+
 
 
 }

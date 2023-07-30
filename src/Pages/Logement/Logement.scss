@@ -65,10 +65,6 @@
             align-items: flex-end;
             gap: 0 10px;
 
-            @media screen and (max-width: 768px) {
-                gap: 0 5px;
-
-            }
 
 
         }
@@ -94,14 +90,14 @@
 
     .logement__content__host__stars {
         display: flex;
-        gap: 5px;
+        gap: 0px;
     }
 
     .logement__content__host__stars img {
         width: 31px;
         height: 31px;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 480px) {
             width: 25px;
             height: 25px;
 
