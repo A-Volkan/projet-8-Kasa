@@ -8,7 +8,7 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Logement from '../Pages/Logement/Logement';
 
 
-
+//mise en page general//
 export const HeaderFooterLayout = () => {
     return <>
         <Navbar />
