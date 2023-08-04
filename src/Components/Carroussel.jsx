@@ -32,7 +32,7 @@ function Carroussel({ image }) {
             setWindowWidth(window.innerWidth);
         };
 
-        window.addEventListener('resize', resize);
+        window.addEventListener('resize', resize); /*appeler la fonction resize a chaque fois que la fenetre est redimensionnée */
     })
 
     return (

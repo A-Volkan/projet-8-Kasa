@@ -4,10 +4,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import './Logement.scss';
 import Carroussel from '../../Components/Carroussel';
 import datas from '../../Infos/Infos';
-import greyStar from '../../img/rate2.png';
-import redStar from '../../img/rate1.png';
 import Collapse from '../../Components/Collapse';
 import Main from '../../Components/Main';
+import Rating from '../../Components/Rating';
 
 
 
@@ -19,7 +18,7 @@ function Logement() {
     const navigate = useNavigate(); /* fonction  de navigation*/
     const CurrentLogement = datas.find(data => data.id === id);/*methode find dans le tableau datas pour trouver l'id correspondant au logement et la stocker dans la variable*/
 
-    const hasFetchedData = useRef(false); /* permet au code dans useEffect de ne pas d'executer plusieur fois si les donnée on deja ete recuperer une premiere fois*/
+    const hasFetchedData = useRef(false); /* permet au code dans useEffect de ne pas d'executer plusieur fois si les donnée on deja ete recuperer une premiere fois ,garde une trace de l'état de récupération des données*/
 
 
     useEffect(() => {
@@ -46,10 +45,7 @@ function Logement() {
     const equipments = CurrentLogement?.equipments || [];
     const description = CurrentLogement?.description || [];
 
-    const stars = Array.from({ length: 5 }, (_, index) => { //crée un nouveau tableau de longueur 5 avec un index pour les etoiles en parametre //
-        const src = index + 1 <= rating ? redStar : greyStar; // verifie si la valeur i + 1 est inferieur ou egale a rating et lui attribu redstar ou dans le cas contriare greystar//
-        return <img key={index} src={src} alt={`star-${index}`} />; // affiche l'img etoile determiné precedement//
-    });
+
 
 
     if (!CurrentLogement) {
@@ -93,7 +89,7 @@ function Logement() {
                                 </div></>
                         )}
                         <div className='logement__content__host__stars'>
-                            {stars}
+                            <Rating rating={rating} />
                         </div>
 
                     </div>
